@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Interaktif</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>To-Do List Interaktif</h1>
+            <p>Catat tugasmu, tandai yang sudah selesai, dan pantau progresnya.</p>
+        </header>
+
+        <!-- Input tugas -->
+        <section class="card">
+            <div class="input-wrapper">
+                <input type="text" id="input-tugas" placeholder="Tulis tugas baru..." autocomplete="off">
+                <button id="btn-tambah" class="btn btn-add">Tambah</button>
+            </div>
+            <p id="pesan-error" class="error hidden"></p>
+        </section>
+
+        <!-- Statistik -->
+        <section class="stats">
+            <div class="stat-box">
+                <span class="stat-label">Total Tugas</span>
+                <span id="stat-total" class="stat-number">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Selesai</span>
+                <span id="stat-selesai" class="stat-number">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Belum Selesai</span>
+                <span id="stat-belum" class="stat-number">0</span>
+            </div>
+        </section>
+
+        <!-- Daftar tugas -->
+        <section class="card">
+            <ul id="daftar-tugas" class="task-list"></ul>
+            <p id="pesan-kosong" class="empty">Belum ada tugas. Silakan tambah tugas baru!</p>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
